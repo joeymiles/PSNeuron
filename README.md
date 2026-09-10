@@ -4,6 +4,10 @@ Educational feed-forward neural network in **PowerShell**, with a WinForms teach
 
 Built for learning — XOR and sine one-step forecast demos, live weight editing, multi-hidden topology, and plain-English tips.
 
+## Screenshot
+
+![PSNeuron educational GUI — XOR demo with live graph, loss strip, and teaching controls](docs/psneuron-gui.png)
+
 ## Requirements
 
 - PowerShell 7+ (`pwsh`) — the module uses the ternary operator
