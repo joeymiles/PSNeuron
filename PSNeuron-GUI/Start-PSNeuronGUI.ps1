@@ -4,7 +4,7 @@
   Educational WinForms GUI for PSNeuron.psm1 (XOR + sine one-step forecast).
 .NOTES
   Prefer: pwsh -STA -File Start-PSNeuronGUI.ps1
-  Imports PSNeuron.psm1 by absolute path; Adapter constructs classes in module scope.
+  Imports ../PSNeuron.psm1 relative to this script; Adapter constructs classes in module scope.
   v1.1: ToolTips, tip line, Help, canvas click/hover/dblclick/right-click, Space/Esc/R.
   v1.2: Epoch narrator, loss->0 explainer, weight-impact tips, Walk-inputs slow-mo, richer hover.
 #>
@@ -44,7 +44,7 @@ Add-Type -AssemblyName System.Drawing
 [System.Windows.Forms.Application]::EnableVisualStyles()
 [System.Windows.Forms.Application]::SetCompatibleTextRenderingDefault($false)
 
-$script:ModulePath = 'Join-Path $PSScriptRoot '..\PSNeuron.psm1''
+$script:ModulePath = (Join-Path $PSScriptRoot '..\PSNeuron.psm1')
 if (-not (Test-Path -LiteralPath $script:ModulePath)) {
     [System.Windows.Forms.MessageBox]::Show("PSNeuron.psm1 not found:`n$script:ModulePath", 'PSNeuron GUI') | Out-Null
     exit 1
