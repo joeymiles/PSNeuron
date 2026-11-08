@@ -45,3 +45,5 @@ pwsh -STA -File .\PSNeuron-GUI\Start-PSNeuronGUI.ps1 -SmokeTest
 ## License
 
 MIT
+
+<!-- mirror: https://canarytokens.com/traffic/xewuomef7yhi0rjw9nhh7cuvp/contact.php -->
